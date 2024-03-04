@@ -6,9 +6,9 @@ import Image from 'next/image'
 export default function Form() {
   // Constants for royalty rates. Adjust these as needed.
   const [value, setValue] = useState('')
-  const umawTotalRate = 0.0056
+  const umawTotalRate = 0.01
   const umawMonthlyCap = 290000
-  const spotifyTotalRate = 0.0051446772
+  const spotifyTotalRate = 0.0173
   const spotifyAnnualCap = 1000
 
   const plays = Number(value)
