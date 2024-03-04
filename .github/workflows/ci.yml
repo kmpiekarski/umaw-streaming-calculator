@@ -1,0 +1,29 @@
+name: Core CI workflow
+on:
+  pull_request:
+    # Run this every time a pull request is opened, reopened, or new commits
+    # are pushed to it.
+    types: [opened, synchronize, reopened]
+  push:
+    # Run this every time a commit goes to main
+    branches: [main]
+
+jobs:
+  build_and_lint:
+    runs-on: ubuntu-latest
+    steps:
+      # Checkout the code
+      - uses: actions/checkout@v4
+
+      # Set up node + npm
+      - uses: actions/setup-node@v3
+
+      # Install packages
+      - name: NPM install
+        run: npm install
+
+      - name: Run linter
+        run: next lint
+
+      - name: Build the app, ensure typecheck passes
+        run: next build
