@@ -17,19 +17,18 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-    text-align: center;
+  background: rgb(2,0,36);
+  background: linear-gradient(45deg, rgba(2,0,36,1) 0%, rgba(16,14,85,1) 0%, rgba(95,206,95,1) 100%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
-
+/* 
 input {
   color: black;
-}
+  padding: 10px;
+  font-size: 1.5rem;
+
+} */
 
 @layer utilities {
   .text-balance {
