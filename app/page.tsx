@@ -8,7 +8,7 @@ export default function Form() {
   const [value, setValue] = useState('')
   const umawTotalRate = 0.01
   const umawMonthlyCap = 290000
-  const spotifyTotalRate = 0.0173
+  const spotifyTotalRate = 0.00173
   const spotifyAnnualCap = 1000
 
   const plays = Number(value)
