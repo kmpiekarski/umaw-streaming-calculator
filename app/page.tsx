@@ -10,14 +10,14 @@ export default function Form() {
   const umawTotalRate = 0.0056;
   const umawMonthlyCap = 290000;
   const spotifyTotalRate = 0.0051446772;
-  const spotifyMonthlyCap = 1000;
+  const spotifyAnnualCap = 1000;
   
   const plays = Number(value)  
 
   // Calculate royalties for each type
   const spotifyRoyalty = (x: number) => {
     let payout:number = 0;
-    payout = x >= spotifyMonthlyCap ? x * spotifyTotalRate : 0;
+    payout = x >= spotifyAnnualCap ? x * spotifyTotalRate : 0;
     return payout;
   }
 
