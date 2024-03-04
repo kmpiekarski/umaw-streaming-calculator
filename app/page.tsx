@@ -28,7 +28,7 @@ export default function Form() {
 
   const spotifyTotal: any = spotifyRoyalty(plays).toFixed(2)
   const umawTotal: any = Math.min(umawRoyalty(plays), umawMonthlyCap).toFixed(2)
-  const difference: any = (umawTotal - spotifyTotal).toFixed(2)
+  const totalPayout: any = (umawTotal + spotifyTotal).toFixed(2)
 
   return (
     <main className="text-white text-center font-serif p-10 drop-shadow">
@@ -89,8 +89,8 @@ export default function Form() {
       </div>
 
       <div className="grid grid-cols-1 content-center mt-10">
-        <div className="card-title">Difference:</div>
-        <div className="text-3xl">${difference}</div>
+        <div className="card-title">Total Payout:</div>
+        <div className="text-3xl">${totalPayout}</div>
         <div className="text-sm mt-10 italic font-sans border-orange-200 border-2 p-5 rounded">
           Disclosure: due to special arrangements between Streaming services,
           DSPs and Labels, this is an estimate of current payout per stream.
