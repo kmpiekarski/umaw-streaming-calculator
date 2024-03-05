@@ -80,7 +80,7 @@ export default function Form() {
           </div>
         </div>
 
-        <div className="grid grid-cols-2 gap-2 content-center">
+        <div className="grid grid-cols-2 gap-2 content-center break-words">
           <div className="text-2xl">${spotifyTotal.toFixed(2)}</div>
           <div className="text-2xl">${umawTotal.toFixed(2)}</div>
         </div>
