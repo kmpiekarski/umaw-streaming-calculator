@@ -33,7 +33,7 @@ export default function Form() {
   const finalTotal: number = umawTotal + spotifyTotal
 
   return (
-    <main className="text-white text-center font-serif p-4 drop-shadow">
+    <main className="text-white text-center font-serif p-4 drop-shadow align-middle inline-block">
       <section className="mx-auto">
         <div className="text-xl pt-1 pb-1 outline-blue-500">
           #MakeStreamingPay
@@ -86,12 +86,8 @@ export default function Form() {
         </div>
 
         <div className="grid grid-cols-2 gap-2 content-center text-sm mt-2 mb-2">
-          <div>
-            Existing DSP Payment<sup>1</sup>
-          </div>
-          <div>
-            Living Wage for Musicians Act<sup>2</sup>
-          </div>
+          <div>Existing DSP Payment</div>
+          <div>Living Wage for Musicians Act</div>
         </div>
 
         <div className="grid grid-cols-2 gap-2 content-center mt-2 mb-2 text-xs font-thin font-sans">
@@ -116,8 +112,10 @@ export default function Form() {
 
         <div className="">
           <div className="text-xs mt-6 italic font-sans border-orange-200 border-2 p-2 rounded text-left font-thin">
-            Disclosure: due to special arrangements between DSPs and Labels,
-            this is an estimate of current payout per stream.
+            Average payout to master rights holders per stream across DSPs
+            (including YouTube) as calculated by the Trichordist. Estimates of
+            existing payouts are necessarily inexact due to the current lack of
+            transparency from streaming platforms.
           </div>
         </div>
       </section>
