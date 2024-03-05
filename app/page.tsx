@@ -103,7 +103,7 @@ export default function Form() {
           <div className="text-xs mt-6 italic font-sans border-orange-200 border-2 p-2 rounded text-left font-thin">
             <ol className="list-decimal pl-4 leading-tight">
               <li>
-                Artists may receive 15-50% of this money due to existinglabel
+                Artists may receive 15-50% of this money due to existing label
                 partnerships.
               </li>
               <li>
