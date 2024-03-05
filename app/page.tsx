@@ -62,7 +62,7 @@ export default function Form() {
         <div className="grid grid-cols-2 gap-2 content-center">
           <div className="mx-auto">
             <Image
-              src="/Spotify_icon.svg"
+              src="/streaming_companies_icon_white.svg"
               alt="Spotify Logo"
               width={85}
               height={85}
