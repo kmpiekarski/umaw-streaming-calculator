@@ -35,17 +35,19 @@ export default function Form() {
   return (
     <main className="text-white text-center font-serif p-10 drop-shadow">
       <div className="text-3xl pt-2 pb-2 outline-blue-500">
-        #MakeStreamingPay Royalty Calculator
+        #MakeStreamingPay
+        <br />
+        Royalty Calculator
       </div>
       <div className="grid grid-cols-1 content-center">
         <label className="text-2xl pt-4 pb-4 italic">
-          Your Number of Streams:
+          Your US streams per month:
         </label>
         <input
           className="rounded-xl text-2xl p-3 mb-6 text-black w-full border-4 border-gray-50 focus:border-gray-50"
-          placeholder="100000???"
+          placeholder="1000"
           type="number"
-          max="11"
+          maxLength={11}
           value={value}
           onChange={(e) => setValue(e.target.value)}
           onKeyPress={(event) => {
@@ -81,11 +83,15 @@ export default function Form() {
 
       <div className="grid grid-cols-2 gap-4 content-center">
         <div>
-          <div className="card-title">Spotify Pays:</div>
+          <div className="card-title">
+            Existing DSP Payment<sup>1</sup>
+          </div>
           <div className="text-3xl">${spotifyTotal.toFixed(2)}</div>
         </div>
         <div>
-          <div className="card-title">Living Wage for Musicians Act:</div>
+          <div className="card-title">
+            Artists will receive all of this money!<sup>2</sup>
+          </div>
           <div className="text-3xl">${umawTotal.toFixed(2)}</div>
         </div>
       </div>
@@ -93,9 +99,17 @@ export default function Form() {
       <div className="grid grid-cols-1 content-center mt-10">
         <div className="text-xl">Your New Total:</div>
         <div className="text-3xl">${finalTotal.toFixed(2)}</div>
-        <div className="text-sm mt-10 italic font-sans border-orange-200 border-2 p-5 rounded">
-          Disclosure: due to special arrangements between Streaming services,
-          DSPs and Labels, this is an estimate of current payout per stream.
+        <div className="text-xs mt-10 italic font-sans border-orange-200 border-2 p-5 rounded text-left">
+          <ol className="list-decimal pl-4">
+            <li>
+              Artists may receive 15-50% of this money due to existinglabel
+              partnerships.
+            </li>
+            <li>
+              Artists will receive all of this money in addition to existing
+              payments.
+            </li>
+          </ol>
         </div>
       </div>
     </main>
