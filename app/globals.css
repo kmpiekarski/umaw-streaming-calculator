@@ -16,7 +16,7 @@
   }
 }
 
-body {
+html {
   /* overflow: hidden; */
   background: rgb(2, 0, 36);
   background: linear-gradient(

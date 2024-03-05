@@ -71,7 +71,7 @@ export default function Form() {
           </div>
           <div className="mx-auto">
             <Image
-              src="/make_streaming_pay_480.png"
+              src="/make_streaming_pay_icon.svg"
               alt="Make Streaming Pay logo"
               width={85}
               height={85}
