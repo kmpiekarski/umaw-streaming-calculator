@@ -94,6 +94,21 @@ export default function Form() {
           </div>
         </div>
 
+        <div className="grid grid-cols-2 gap-2 content-center mt-2 mb-2 text-xs font-thin font-sans">
+          <div>
+            <p>
+              Artists may receive 15-50% of this money due to existing label
+              partnerships.
+            </p>
+          </div>
+          <div>
+            <p>
+              Artists will receive all of this money in addition to existing
+              payments.
+            </p>
+          </div>
+        </div>
+
         <div className="grid grid-cols-1 content-center mt-6">
           <div className="text-sm">Your New Total:</div>
           <div className="text-2xl">${finalTotal.toFixed(2)}</div>
@@ -101,16 +116,8 @@ export default function Form() {
 
         <div className="">
           <div className="text-xs mt-6 italic font-sans border-orange-200 border-2 p-2 rounded text-left font-thin">
-            <ol className="list-decimal pl-4 leading-tight">
-              <li>
-                Artists may receive 15-50% of this money due to existing label
-                partnerships.
-              </li>
-              <li>
-                Artists will receive all of this money in addition to existing
-                payments.
-              </li>
-            </ol>
+            Disclosure: due to special arrangements between DSPs and Labels,
+            this is an estimate of current payout per stream.
           </div>
         </div>
       </section>
