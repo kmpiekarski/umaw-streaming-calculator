@@ -7,7 +7,7 @@ export default function Form() {
   // Constants for royalty rates. Adjust these as needed.
   const [value, setValue] = useState('')
   const umawTotalRate = 0.01
-  const umawMonthlyCap = 290000
+  // const umawMonthlyCap = 1000000
   const spotifyTotalRate = 0.00173
   // const spotifyAnnualCap = 1000
 
