@@ -90,7 +90,7 @@ export default function Form() {
             Existing DSP Payment<sup>1</sup>
           </div>
           <div>
-            Artists will receive all of this money!<sup>2</sup>
+            Living Wage for Musicians Act<sup>2</sup>
           </div>
         </div>
 
