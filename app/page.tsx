@@ -16,7 +16,8 @@ export default function Form() {
   // Calculate royalties for each type
   const spotifyRoyalty = (x: number) => {
     let payout: number = 0
-    payout = x >= spotifyAnnualCap ? x * spotifyTotalRate : 0
+    // payout = x >= spotifyAnnualCap ? x * spotifyTotalRate : 0
+    payout = spotifyTotalRate * x
     return payout
   }
 
@@ -26,9 +27,10 @@ export default function Form() {
     return payout
   }
 
-  const spotifyTotal: any = spotifyRoyalty(plays).toFixed(2)
-  const umawTotal: any = Math.min(umawRoyalty(plays), umawMonthlyCap).toFixed(2)
-  const totalPayout: any = (umawTotal + spotifyTotal).toFixed(2)
+  const spotifyTotal: number = spotifyRoyalty(plays)
+  // const umawTotal: number = Math.min(umawRoyalty(plays), umawMonthlyCap)
+  const umawTotal: number = Math.min(umawRoyalty(plays), umawMonthlyCap)
+  const finalTotal: number = umawTotal + spotifyTotal
 
   return (
     <main className="text-white text-center font-serif p-10 drop-shadow">
@@ -80,17 +82,17 @@ export default function Form() {
       <div className="grid grid-cols-2 gap-4 content-center">
         <div>
           <div className="card-title">Spotify Pays:</div>
-          <div className="text-3xl">${spotifyTotal}</div>
+          <div className="text-3xl">${spotifyTotal.toFixed(2)}</div>
         </div>
         <div>
           <div className="card-title">Living Wage for Musicians Act:</div>
-          <div className="text-3xl">${umawTotal}</div>
+          <div className="text-3xl">${umawTotal.toFixed(2)}</div>
         </div>
       </div>
 
       <div className="grid grid-cols-1 content-center mt-10">
-        <div className="card-title">Total Payout:</div>
-        <div className="text-3xl">${totalPayout}</div>
+        <div className="text-xl">Your New Total:</div>
+        <div className="text-3xl">${finalTotal.toFixed(2)}</div>
         <div className="text-sm mt-10 italic font-sans border-orange-200 border-2 p-5 rounded">
           Disclosure: due to special arrangements between Streaming services,
           DSPs and Labels, this is an estimate of current payout per stream.
