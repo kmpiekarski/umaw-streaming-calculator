@@ -37,6 +37,12 @@ main {
 section {
   max-width: 450px;
 }
+sup {
+  color: gold;
+  font-size: 10px !important;
+  font-style: normal;
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
