@@ -80,6 +80,11 @@ export default function Form() {
           </div>
         </div>
 
+        <div className="grid grid-cols-2 gap-2 content-center">
+          <div className="text-2xl">${spotifyTotal.toFixed(2)}</div>
+          <div className="text-2xl">${umawTotal.toFixed(2)}</div>
+        </div>
+
         <div className="grid grid-cols-2 gap-2 content-center text-sm mt-2 mb-2">
           <div>
             Existing DSP Payment<sup>1</sup>
@@ -89,15 +94,13 @@ export default function Form() {
           </div>
         </div>
 
-        <div className="grid grid-cols-2 gap-2 content-center">
-          <div className="text-2xl">${spotifyTotal.toFixed(2)}</div>
-          <div className="text-2xl">${umawTotal.toFixed(2)}</div>
-        </div>
-
-        <div className="grid grid-cols-1 content-center mt-10">
+        <div className="grid grid-cols-1 content-center mt-6">
           <div className="text-sm">Your New Total:</div>
           <div className="text-2xl">${finalTotal.toFixed(2)}</div>
-          <div className="text-xs mt-10 italic font-sans border-orange-200 border-2 p-2 rounded text-left font-thin">
+        </div>
+
+        <div className="">
+          <div className="text-xs mt-6 italic font-sans border-orange-200 border-2 p-2 rounded text-left font-thin">
             <ol className="list-decimal pl-4 leading-tight">
               <li>
                 Artists may receive 15-50% of this money due to existinglabel
