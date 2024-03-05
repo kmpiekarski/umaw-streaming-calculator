@@ -29,7 +29,7 @@ export default function Form() {
 
   const spotifyTotal: number = spotifyRoyalty(plays)
   // const umawTotal: number = Math.min(umawRoyalty(plays), umawMonthlyCap)
-  const umawTotal: number = Math.min(umawRoyalty(plays), umawMonthlyCap)
+  const umawTotal: number = umawRoyalty(plays)
   const finalTotal: number = umawTotal + spotifyTotal
 
   return (
