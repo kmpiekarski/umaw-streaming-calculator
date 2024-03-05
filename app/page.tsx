@@ -34,81 +34,83 @@ export default function Form() {
 
   return (
     <main className="text-white text-center font-serif p-4 drop-shadow">
-      <div className="text-xl pt-1 pb-1 outline-blue-500">
-        #MakeStreamingPay
-        <br />
-        Royalty Calculator
-      </div>
-      <div className="grid grid-cols-1 content-center">
-        <label className="text-xl pt-2 pb-2 italic">
-          Your US streams per month:
-        </label>
-        <input
-          className="rounded-xl text-2xl p-3 mb-6 w-full border-4 border-gray-50 focus:border-gray-50 text-center text-black font-sans"
-          placeholder="1000"
-          type="number"
-          maxLength={11}
-          value={value}
-          onChange={(e) => setValue(e.target.value)}
-          onKeyPress={(event) => {
-            if (!/[0-9]/.test(event.key)) {
-              event.preventDefault()
-            }
-          }}
-        />
-      </div>
-
-      <div className="grid grid-cols-2 gap-2 content-center">
-        <div className="mx-auto">
-          <Image
-            src="/Spotify_icon.svg"
-            alt="Spotify Logo"
-            width={85}
-            height={85}
-            priority
+      <section className="mx-auto">
+        <div className="text-xl pt-1 pb-1 outline-blue-500">
+          #MakeStreamingPay
+          <br />
+          Royalty Calculator
+        </div>
+        <div className="grid grid-cols-1 content-center">
+          <label className="text-xl pt-2 pb-2 italic">
+            Your US streams per month:
+          </label>
+          <input
+            className="rounded-xl text-2xl p-3 mb-6 w-full border-4 border-gray-50 focus:border-gray-50 text-center text-black font-sans"
+            placeholder="1000"
+            type="number"
+            maxLength={11}
+            value={value}
+            onChange={(e) => setValue(e.target.value)}
+            onKeyPress={(event) => {
+              if (!/[0-9]/.test(event.key)) {
+                event.preventDefault()
+              }
+            }}
           />
         </div>
-        <div className="mx-auto">
-          <Image
-            src="/make_streaming_pay_480.png"
-            alt="Make Streaming Pay logo"
-            width={85}
-            height={85}
-            priority
-          />
-        </div>
-      </div>
 
-      <div className="grid grid-cols-2 gap-2 content-center text-sm mt-2 mb-2">
-        <div>
-          Existing DSP Payment<sup>1</sup>
+        <div className="grid grid-cols-2 gap-2 content-center">
+          <div className="mx-auto">
+            <Image
+              src="/Spotify_icon.svg"
+              alt="Spotify Logo"
+              width={85}
+              height={85}
+              priority
+            />
+          </div>
+          <div className="mx-auto">
+            <Image
+              src="/make_streaming_pay_480.png"
+              alt="Make Streaming Pay logo"
+              width={85}
+              height={85}
+              priority
+            />
+          </div>
         </div>
-        <div>
-          Artists will receive all of this money!<sup>2</sup>
-        </div>
-      </div>
 
-      <div className="grid grid-cols-2 gap-2 content-center">
-        <div className="text-2xl">${spotifyTotal.toFixed(2)}</div>
-        <div className="text-2xl">${umawTotal.toFixed(2)}</div>
-      </div>
-
-      <div className="grid grid-cols-1 content-center mt-10">
-        <div className="text-sm">Your New Total:</div>
-        <div className="text-2xl">${finalTotal.toFixed(2)}</div>
-        <div className="text-xs mt-10 italic font-sans border-orange-200 border-2 p-2 rounded text-left font-thin">
-          <ol className="list-decimal pl-4 leading-tight">
-            <li>
-              Artists may receive 15-50% of this money due to existinglabel
-              partnerships.
-            </li>
-            <li>
-              Artists will receive all of this money in addition to existing
-              payments.
-            </li>
-          </ol>
+        <div className="grid grid-cols-2 gap-2 content-center text-sm mt-2 mb-2">
+          <div>
+            Existing DSP Payment<sup>1</sup>
+          </div>
+          <div>
+            Artists will receive all of this money!<sup>2</sup>
+          </div>
         </div>
-      </div>
+
+        <div className="grid grid-cols-2 gap-2 content-center">
+          <div className="text-2xl">${spotifyTotal.toFixed(2)}</div>
+          <div className="text-2xl">${umawTotal.toFixed(2)}</div>
+        </div>
+
+        <div className="grid grid-cols-1 content-center mt-10">
+          <div className="text-sm">Your New Total:</div>
+          <div className="text-2xl">${finalTotal.toFixed(2)}</div>
+          <div className="text-xs mt-10 italic font-sans border-orange-200 border-2 p-2 rounded text-left font-thin">
+            <ol className="list-decimal pl-4 leading-tight">
+              <li>
+                Artists may receive 15-50% of this money due to existinglabel
+                partnerships.
+              </li>
+              <li>
+                Artists will receive all of this money in addition to existing
+                payments.
+              </li>
+            </ol>
+          </div>
+        </div>
+      </section>
     </main>
   )
 }

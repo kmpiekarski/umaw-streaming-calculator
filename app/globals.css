@@ -17,10 +17,7 @@
 }
 
 body {
-  overflow: hidden;
-}
-
-main {
+  /* overflow: hidden; */
   background: rgb(2, 0, 36);
   background: linear-gradient(
     45deg,
@@ -30,11 +27,16 @@ main {
   );
   background-repeat: no-repeat;
   background-attachment: fixed;
-  max-width: 450px;
+}
+
+main {
   width: 100%;
   height: 100%;
 }
 
+section {
+  max-width: 450px;
+}
 @layer utilities {
   .text-balance {
     text-wrap: balance;
