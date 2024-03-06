@@ -52,7 +52,7 @@ export default function Page() {
             maxLength={11}
             value={value}
             onClick={() =>
-              sendGAEvent({ event: 'inputUsed', value: { value } })
+              sendGAEvent({ event: 'calculator_input', value: { value } })
             }
             onChange={(e) => setValue(e.target.value)}
             onKeyPress={(event) => {
