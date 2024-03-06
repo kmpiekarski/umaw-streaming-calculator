@@ -2,8 +2,9 @@
 
 import { useState } from 'react'
 import Image from 'next/image'
+import { GoogleAnalytics, sendGAEvent } from '@next/third-parties/google'
 
-export default function Form() {
+export default function Page() {
   // Constants for royalty rates. Adjust these as needed.
   const [value, setValue] = useState('')
   const umawTotalRate = 0.01
@@ -50,6 +51,9 @@ export default function Form() {
             type="number"
             maxLength={11}
             value={value}
+            onClick={() =>
+              sendGAEvent({ event: 'inputUsed', value: { value } })
+            }
             onChange={(e) => setValue(e.target.value)}
             onKeyPress={(event) => {
               if (!/[0-9]/.test(event.key)) {
