@@ -5,12 +5,12 @@ import './globals.css'
 
 const inter = Inter({ subsets: ['latin'] })
 
-const gaId = process.env.GOOGLE_ANALYTICS_ID
+const gaId = process.env.GOOGLE_ANALYTICS_ID!
 
 const gtm = {
-  id: process.env.GTM_ID,
-  auth: process.env.GTM_AUTH,
-  preview: process.env.GTM_PREVIEW,
+  id: process.env.GTM_ID!,
+  auth: process.env.GTM_AUTH!,
+  preview: process.env.GTM_PREVIEW!,
 }
 
 export const metadata: Metadata = {
