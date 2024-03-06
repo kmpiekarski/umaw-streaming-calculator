@@ -5,6 +5,14 @@ import './globals.css'
 
 const inter = Inter({ subsets: ['latin'] })
 
+const gaId = process.env.GOOGLE_ANALYTICS_ID!
+
+const gtm = {
+  id: process.env.GTM_ID!,
+  auth: process.env.GTM_AUTH!,
+  preview: process.env.GTM_PREVIEW!,
+}
+
 export const metadata: Metadata = {
   title: 'Living Wage for Musicians Act Calculator',
   description:
@@ -26,8 +34,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>{children}</body>
-      <GoogleAnalytics gaId="G-XP6XP088NW" />
-      <GoogleTagManager gtmId="GTM-MTDPL22N" />
+      <GoogleAnalytics gaId={gaId} />
+      <GoogleTagManager gtmId={gtm.id} auth={gtm.auth} preview={gtm.preview} />
     </html>
   )
 }
