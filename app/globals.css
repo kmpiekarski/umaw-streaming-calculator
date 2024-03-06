@@ -16,18 +16,31 @@
   }
 }
 
-body {
-  overflow: hidden;
+html {
+  /* overflow: hidden; */
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    45deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(16, 14, 85, 1) 0%,
+    rgba(95, 206, 95, 1) 100%
+  );
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 main {
-  background: rgb(2,0,36);
-  background: linear-gradient(45deg, rgba(2,0,36,1) 0%, rgba(16,14,85,1) 0%, rgba(95,206,95,1) 100%);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  max-width: 450px;
   width: 100%;
   height: 100%;
+}
+
+section {
+  max-width: 450px;
+}
+sup {
+  color: gold;
+  font-size: 10px !important;
+  font-style: normal;
 }
 
 @layer utilities {
