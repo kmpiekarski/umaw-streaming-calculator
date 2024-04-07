@@ -51,6 +51,8 @@ export default function Page() {
             type="number"
             maxLength={11}
             value={value}
+            inputMode="numeric"
+            pattern="[0-9]*"
             onClick={() =>
               sendGAEvent({ event: 'calculator_input', value: { value } })
             }
