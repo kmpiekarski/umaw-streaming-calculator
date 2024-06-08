@@ -13,10 +13,13 @@ const gtm = {
   preview: process.env.GTM_PREVIEW!,
 }
 
+const verificationCode = process.env.GOOGLE_SEARCH_CONSOLE_VERIFICATION!
+
 export const metadata: Metadata = {
   title: 'Living Wage for Musicians Act Calculator',
   description:
     'Created by Kenneth M. Piekarski for United Musicians and Allied Workers (UMAW)',
+  verification: { google: verificationCode },
 }
 
 export const viewport: Viewport = {

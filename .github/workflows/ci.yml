@@ -12,9 +12,16 @@ env:
   GTM_ID: ${{ secrets.GTM_ID }}
   GTM_AUTH: ${{ secrets.GTM_AUTH }}
   GTM_PREVIEW: ${{ secrets.GTM_PREVIEW }}
+  GOOGLE_SEARCH_CONSOLE_VERIFICATION: ${{ secrets.GOOGLE_SEARCH_CONSOLE_VERIFICATION }}
 jobs:
   build_and_lint:
     runs-on: ubuntu-latest
+    env:
+      GOOGLE_ANALYTICS_ID: GOOGLE_ANALYTICS_ID
+      GTM_ID: GTM_ID
+      GTM_AUTH: GTM_AUTH
+      GTM_PREVIEW: GTM_PREVIEW
+      GOOGLE_SEARCH_CONSOLE_VERIFICATION: GOOGLE_SEARCH_CONSOLE_VERIFICATION
     steps:
       # Checkout the code
       - uses: actions/checkout@v4
