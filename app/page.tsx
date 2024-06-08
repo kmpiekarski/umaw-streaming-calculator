@@ -36,20 +36,18 @@ export default function Page() {
   return (
     <main className="text-white text-center font-serif p-4 drop-shadow align-middle inline-block">
       <section className="mx-auto">
-        <div className="text-xl pt-1 pb-1 outline-blue-500">
+        <div className="text-lg pt-1 pb-3 outline-blue-500">
           #MakeStreamingPay
           <br />
-          Royalty Calculator
+          Streaming Royalty Calculator
         </div>
         <div className="grid grid-cols-1 content-center">
-          <label className="text-xl pt-2 pb-2 italic">
-            Your US streams per month:
-          </label>
           <input
-            className="rounded-xl text-2xl p-3 mb-6 w-full border-4 border-gray-50 focus:border-gray-50 text-center text-black font-sans"
-            placeholder="1000"
+            aria-label="Enter your monthly US streams"
+            className="rounded-xl text-md p-1 mb-6 w-full border-4 border-gray-50 focus:border-gray-50 text-center text-black font-sans"
+            placeholder="Enter your monthly US streams"
             type="number"
-            maxLength={11}
+            maxLength={8}
             value={value}
             inputMode="numeric"
             pattern="[0-9]*"
