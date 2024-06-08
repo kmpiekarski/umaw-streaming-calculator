@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import Image from 'next/image'
-import { GoogleAnalytics, sendGAEvent } from '@next/third-parties/google'
+import { sendGAEvent } from '@next/third-parties/google'
 
 export default function Page() {
   // Constants for royalty rates. Adjust these as needed.
