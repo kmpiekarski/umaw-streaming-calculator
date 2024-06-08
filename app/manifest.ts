@@ -8,8 +8,8 @@ export default function manifest(): MetadataRoute.Manifest {
       'Streaming royality calculator estimating US artist payout through the Living Wage for Musicians Act',
     start_url: '/',
     display: 'standalone',
-    background_color: '#000',
-    theme_color: '#000',
+    background_color: '#1C1F76',
+    theme_color: '#1C1F76',
     icons: [
       {
         src: '/favicon.ico',
