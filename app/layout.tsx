@@ -38,7 +38,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>{children}</body>
       <GoogleAnalytics gaId={gaId} />
-      <GoogleTagManager gtmId={gtm.id} auth={gtm.auth} preview={gtm.preview} />
+      <GoogleTagManager gtmId={gtm.id} auth={gtm.auth} />
     </html>
   )
 }
