@@ -7,7 +7,11 @@ on:
   push:
     # Run this every time a commit goes to main
     branches: [main]
-
+env:
+  GOOGLE_ANALYTICS_ID: ${{ secrets.GOOGLE_ANALYTICS_ID }}
+  GTM_ID: ${{ secrets.GTM_ID }}
+  GTM_AUTH: ${{ secrets.GTM_AUTH }}
+  GTM_PREVIEW: ${{ secrets.GTM_PREVIEW }}
 jobs:
   build_and_lint:
     runs-on: ubuntu-latest
