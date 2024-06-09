@@ -75,7 +75,7 @@ export default function Page() {
           </div>
           <div className="mx-auto">
             <Image
-              src="/make_streaming_pay_icon.svg"
+              src="/icon.svg"
               alt="Make Streaming Pay logo"
               width={85}
               height={85}
