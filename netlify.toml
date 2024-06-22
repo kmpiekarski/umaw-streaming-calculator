@@ -5,6 +5,7 @@
 [[plugins]]
   package = "@netlify/plugin-a11y"
   [plugins.inputs]
+    checkPaths = ['/']
     failWithIssues = false
     wcagLevel = 'WCAG2AAA'
 [[plugins]]
