@@ -1,0 +1,12 @@
+{
+  "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.fontSize": 13,
+  "editor.formatOnSave": true,
+  "editor.stickyScroll.enabled": false,
+  "editor.tabSize": 2,
+  "eslint.format.enable": true,
+  "explorer.confirmDragAndDrop": false,
+  "prettier.configPath": ".prettierrc",
+  "prettier.ignorePath": ".prettierignore"
+}
