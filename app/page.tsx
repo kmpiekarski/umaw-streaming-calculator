@@ -34,9 +34,9 @@ export default function Page() {
   const finalTotal: number = umawTotal + spotifyTotal
 
   return (
-    <main className="text-white text-center font-serif p-4 drop-shadow align-middle inline-block">
+    <main className="inline-block p-4 text-center align-middle font-serif text-white drop-shadow">
       <section className="mx-auto">
-        <div className="text-lg pt-1 pb-3 outline-blue-500">
+        <div className="pb-3 pt-1 text-lg outline-blue-500">
           #MakeStreamingPay
           <br />
           Streaming Royalty Calculator
@@ -44,7 +44,7 @@ export default function Page() {
         <div className="grid grid-cols-1 content-center">
           <input
             aria-label="Enter your monthly US streams"
-            className="rounded-xl text-md p-1 mb-6 w-full border-4 border-gray-50 focus:border-gray-50 text-center text-black font-sans"
+            className="text-md mb-6 w-full rounded-xl border-4 border-gray-50 p-1 text-center font-sans text-black focus:border-gray-50"
             placeholder="Enter your monthly US streams"
             type="number"
             maxLength={8}
@@ -63,7 +63,7 @@ export default function Page() {
           />
         </div>
 
-        <div className="grid grid-cols-2 gap-2 content-center">
+        <div className="grid grid-cols-2 content-center gap-2">
           <div className="mx-auto">
             <Image
               src="/streaming_companies_icon_white.svg"
@@ -84,19 +84,19 @@ export default function Page() {
           </div>
         </div>
 
-        <div className="grid grid-cols-2 gap-2 content-center break-words">
+        <div className="grid grid-cols-2 content-center gap-2 break-words">
           <div className="text-2xl">${spotifyTotal.toFixed(2)}</div>
           <div className="text-2xl">${umawTotal.toFixed(2)}</div>
         </div>
 
-        <div className="grid grid-cols-2 gap-2 content-center text-sm mt-2 mb-2">
+        <div className="mb-2 mt-2 grid grid-cols-2 content-center gap-2 text-sm">
           <div>
             Existing DSP Payment<sup>&#42;</sup>
           </div>
           <div>Living Wage for Musicians Act</div>
         </div>
 
-        <div className="grid grid-cols-2 gap-2 content-center mt-2 mb-2 text-xs font-thin font-sans">
+        <div className="mb-2 mt-2 grid grid-cols-2 content-center gap-2 font-sans text-xs font-thin">
           <div>
             <p>
               Artists may receive 15-50% of this money due to existing label
@@ -111,13 +111,13 @@ export default function Page() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 content-center mt-6">
+        <div className="mt-6 grid grid-cols-1 content-center">
           <div className="text-sm">Your New Total:</div>
           <div className="text-2xl">${finalTotal.toFixed(2)}</div>
         </div>
 
         <div className="">
-          <div className="text-xs mt-6 italic font-sans border-orange-200 border-2 p-2 rounded text-left font-thin">
+          <div className="mt-6 rounded border-2 border-orange-200 p-2 text-left font-sans text-xs font-thin italic">
             <sup>&#42;</sup>Average payout to master rights holders per stream
             across DSPs (including YouTube) as calculated by the Trichordist.
             Estimates of existing payouts are necessarily inexact due to the
